@@ -1,0 +1,106 @@
+/* Définition des variables CSS globales */
+:root {
+    /* Variables de couleur existantes */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+  
+    /* Variables de police existantes */
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-title: 'Raleway' 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    /* Variables de taille de police existantes */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+  
+    /* Nouvelles variables pour l'épaisseur de la police */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Nouvelles variables pour la hauteur de ligne */
+    --line-height-small: 1.2; /* Hauteur de ligne petite */
+    --line-height-base: 1.5; /* Hauteur de ligne standard */
+    --line-height-big: 1.8; /* Hauteur de ligne grande */
+
+    /* Nouvelle variable pour l'alignement des titres de section */
+    --section-header-align: center; /* Alignement centré */
+
+     /* Nouvelle variable pour la transformation du texte de la tagline */
+    --section-tagline-transform: uppercase; /* Transformation en majuscules */
+
+    /* Nouvelles variables pour le titre de section */
+    --section-title-margin: 0; /* Marge du titre de section */
+    --section-title-color: var(--color-black); /* Couleur du titre de section */
+}
+  
+  /* Styles pour html */
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  /* Styles pour le corps du document */
+  body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular); /* Nouvelle ligne */
+
+    /* Application de la hauteur de ligne minimale au corps */
+    line-height: var(--line-height-base); /* Nouvelle ligne ajoutée */
+}
+
+  a {
+    color: var(--text-color);
+    text-decoration: none; /* Suppression de la décoration par défaut des liens */
+  }
+  
+  .visually-hidden {
+    display: none;
+  }
+  
+  .card-category {
+    color: var(--color-primary);
+  }
+  
+  .section-tagline {
+    font-family: var(--font-family-title); /* Application de la police des titres */
+    text-transform: var(--section-tagline-transform); /* Transformation en majuscules */
+    font-weight: var(--font-weight-bold); /* Application du poids en gras */
+    color: var(--color-primary);
+  }
+  
+  /* Styles pour les titres */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold); /* Nouvelle ligne */
+  }
+
+  /* Nouvelle règle pour le titre de section */
+    .section-title {
+    font-family: var(--font-family-title); /* Application de la police des titres */
+    font-size: var(--font-size-xx-large); /* Taille du texte définie à xx-large */
+    font-weight: var(--font-weight-bold); /* Poids en gras */
+
+    margin: var(--section-title-margin); /* Application de la marge définie à zéro */
+  
+    color: var(--section-title-color); /* Application de la couleur définie en noir */
+  }
+
+  /* Nouvelle règle pour centrer les titres de section */
+    .section-header {
+        text-align: var(--section-header-align); /* Application de l'alignement centré */
+  }
+  
+  /* Autres styles existants... */
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
